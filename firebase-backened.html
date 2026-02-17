@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Firebase Google Login (With Backend)</title>
+
+  <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+</head>
+
+<body>
+
+<h2>Firebase Google Login (With Backend Verification)</h2>
+
+<button onclick="login()">Login with Google</button>
+<button onclick="logout()">Logout</button>
+
+<p id="user"></p>
+
+<script>
+  // 🔴 REPLACE WITH YOUR FIREBASE CONFIG
+  const firebaseConfig = {
+    apiKey: "AIzaSyB-HwI1VGxSzBQAY3rdAqbGlAx3p5SDDSs",
+    authDomain: "projectaj-f39ea.firebaseapp.com",
+    projectId: "projectaj-f39ea",
+    storageBucket:"projectaj-f39ea.firebasestorage.app",
+    messagingSenderId:"952863813470",
+    appId: "1:952863813470:web:6898fb644f08621a83e9cf"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+
+  function login() {
+    const provider = new firebase.auth.GoogleAuthProvider();
+
+    auth.signInWithPopup(provider)
+      .then(result => {
+        return result.user.getIdToken();
+      })
+      .then(idToken => {
+
+        // Send token to backend (PHP)
+        fetch("firebase-verify.php", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ token: idToken })
+        })
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("user").innerHTML = data;
+        });
+
+      })
+      .catch(error => {
+        console.error(error);
+        alert("Login failed");
+      });
+  }
+
+  function logout() {
+    auth.signOut().then(() => {
+      document.getElementById("user").innerHTML = "Logged out";
+    });
+  }
+
+</script>
+
+</body>
+</html>

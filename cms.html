@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courier Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js">
+      
+    </script>
+ 
+
+
+
+
+<div class="container">
+
+    <!-- Left Section -->
+    <div class="left">
+        <h1>Courier Management System</h1>
+        <video class="promo-video" autoplay muted loop playsinline>
+    <source src="c:\Users\Akhil\Downloads\courier.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+        <!--<img src="C:\Users\Akhil\Downloads\download (1).jpg" alt="Courier Image">-->
+        <p>
+            Manage deliveries, track parcels, and ensure fast & secure courier services.
+            Simple, reliable, and efficient logistics management.
+        </p>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right">
+        <h2>User Login</h2>
+
+        <form>
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" placeholder="Enter username">
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" placeholder="Enter password">
+            </div>
+
+            <div class="form-group">
+                <label>Address</label>
+                <input type="text" placeholder="Enter address">
+            </div>
+
+            <button class="login-btn">Login</button>
+        </form>
+
+        <div class="delivery">
+            <h3>Types of Delivery</h3>
+            <ul>
+                <li>🚚 Standard Delivery</li>
+                <li>⚡ Express Delivery</li>
+                <li>🌍 International Shipping</li>
+                <li>📦 Same-Day Delivery</li>
+            </ul>
+               <button onclick="trackParcel()" >Track</button>
+    
+</div>
+
+<ul id="statusTimeline"></ul>
+<p id="tracking"></p>
+<p id="sender"></p>
+<p id="receiver"></p>
+<p id="status"></p>
+<p id="cost"></p>
+
+<button onclick="updateStatus()">Update Status</button>
+
+<ul id="statusTimeline"></ul>
+
+    
+        </div>
+    </div>
+             
+
+      
+
+
+</div>
+</body>
+</html>

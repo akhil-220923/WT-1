@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Firebase Google Login</title>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+</head>
+<body>
+
+<h2>Firebase Google Login (No Backend)</h2>
+<button onclick="login()">Login with Google</button>
+<button onclick="logout()">Logout</button>
+
+<div id="user"></div>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } 
+from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyB-HwI1VGxSzBQAY3rdAqbGlAx3p5SDDSs",
+  authDomain: "projectaj-f39ea.firebaseapp.com",
+  projectId: "projectaj-f39ea",
+  appId: "1:952863813470:web:6898fb644f08621a83e9cf"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+
+window.login = function() {
+  signInWithPopup(auth, provider)
+    .then(result => {
+      const user = result.user;
+      document.getElementById("user").innerHTML =
+        `<img src="${user.photoURL}" width="100"><br>
+         Name: ${user.displayName}<br>
+         Email: ${user.email}`;
+    });
+}
+
+window.logout = function() {
+  signOut(auth);
+  document.getElementById("user").innerHTML = "";
+}
+
+</script>
+
+</body>
+</html>
