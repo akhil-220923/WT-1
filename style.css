@@ -3,20 +3,32 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Segoe UI", Tahoma, sans-serif;
+<<<<<<< HEAD
     background-color: lightyellow;
+=======
+>>>>>>> 2f1a0f217cfa2929b1a85df988d8009a6bbbd1db
 }
 
 body {
     min-height: 100vh;
+<<<<<<< HEAD
     background: grey;
+=======
+    background: white;
+>>>>>>> 2f1a0f217cfa2929b1a85df988d8009a6bbbd1db
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .container {
+<<<<<<< HEAD
     width: 100%;
     min-height:100vh;
+=======
+    width: 900px;
+    max-width: 95%;
+>>>>>>> 2f1a0f217cfa2929b1a85df988d8009a6bbbd1db
     background: #ffffff;
     border-radius: 15px;
     display: flex;
