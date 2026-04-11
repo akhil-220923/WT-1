@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Akhil Kuncham – Full Stack Developer | Personal Portfolio & Digital Resume built with Bootstrap 5"/>
+  <title>Akhil Kuncham | Digital Resume</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="#hero"><i class="bi bi-code-slash me-2"></i>Akhil.dev</a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <i class="bi bi-list text-white fs-4"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="#about"><i class="bi bi-person me-1"></i>About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills"><i class="bi bi-stars me-1"></i>Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects"><i class="bi bi-grid me-1"></i>Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education"><i class="bi bi-mortarboard me-1"></i>Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery"><i class="bi bi-images me-1"></i>Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact"><i class="bi bi-envelope me-1"></i>Contact</a></li>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots me-1"></i>More</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#interactive"><i class="bi bi-lightning me-2"></i>Interactive</a></li>
+            <li><a class="dropdown-item" href="#gallery"><i class="bi bi-camera me-2"></i>Gallery</a></li>
+            <li><hr class="dropdown-divider border-secondary"/></li>
+            <li><a class="dropdown-item" href="#contact"><i class="bi bi-chat-dots me-2"></i>Hire Me</a></li>
+          </ul>
+        </li>
+        <li class="nav-item ms-lg-2">
+          <button class="btn btn-gradient btn-sm px-3" id="quickContactBtn">
+            <i class="bi bi-send me-1"></i>Quick Contact
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero">
+  <div class="container z-10">
+    <!-- Dynamic alert (jQuery show/hide demo) -->
+    <div id="dynamic-alert" class="alert alert-custom mb-4" role="alert">
+      <i class="bi bi-info-circle me-2"></i>Opening contact form… Let's connect!
+    </div>
+    <div class="row align-items-center gy-5">
+      <!-- col ordering demo: order-md-1 / order-md-2 -->
+      <div class="col-12 col-md-6 order-md-1 fade-up">
+        <span class="hero-badge"><i class="bi bi-lightning-fill me-1"></i>Available for Work</span>
+        <h1 class="hero-title mb-3">Hi, I'm<br/>Akhil Kuncham</h1>
+        <p class="hero-subtitle mb-4">
+          <span id="typed-role">Full Stack Developer</span><span class="text-primary">|</span>
+        </p>
+        <p class="text-muted-custom mb-4 d-none d-md-block" style="max-width:480px">
+          Passionate developer crafting modern web experiences with clean code and creative design.
+        </p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#projects" class="btn btn-gradient"><i class="bi bi-grid me-2"></i>View Projects</a>
+          <a href="#contact" class="btn btn-outline-glow"><i class="bi bi-download me-2"></i>Download CV</a>
+        </div>
+        <div class="mt-4 d-flex gap-3">
+          <span class="badge rounded-pill" style="background:rgba(99,102,241,.2);color:#c7d2fe;border:1px solid rgba(99,102,241,.3)"><i class="bi bi-check-circle me-1"></i>Bootstrap 5</span>
+          <span class="badge rounded-pill" style="background:rgba(6,182,212,.2);color:#67e8f9;border:1px solid rgba(6,182,212,.3)"><i class="bi bi-check-circle me-1"></i>PHP</span>
+          <span class="badge rounded-pill" style="background:rgba(139,92,246,.2);color:#ddd6fe;border:1px solid rgba(139,92,246,.3)"><i class="bi bi-check-circle me-1"></i>MySQL</span>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 order-md-2 text-center fade-up">
+        <div style="position:relative;display:inline-block">
+          <div style="width:280px;height:280px;background:linear-gradient(135deg,#6366f1,#06b6d4);border-radius:30% 70% 70% 30%/30% 30% 70% 70%;display:flex;align-items:center;justify-content:center;animation:morph 8s ease-in-out infinite;margin:0 auto;box-shadow:0 0 80px rgba(99,102,241,0.4)">
+            <i class="bi bi-person-circle" style="font-size:8rem;color:rgba(255,255,255,0.9)"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about">
+  <div class="container">
+    <div class="row gy-5 align-items-center">
+      <div class="col-12 col-md-5 fade-up">
+        <div style="background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:24px;padding:3rem;border:1px solid rgba(255,255,255,.1);text-align:center">
+          <i class="bi bi-person-badge" style="font-size:6rem;background:linear-gradient(135deg,#6366f1,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent"></i>
+          <h3 class="mt-3" style="color:#f1f5f9;font-weight:700">Akhil Kuncham</h3>
+          <p style="color:#94a3b8">Full Stack Developer</p>
+          <!-- img-fluid demo -->
+          <img src="https://via.placeholder.com/200x10/6366f1/6366f1?text=+" class="img-fluid" style="height:3px;width:80%;border-radius:2px" alt="divider"/>
+        </div>
+      </div>
+      <div class="col-12 col-md-7 fade-up">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-divider"></div>
+        <p class="text-muted-custom mb-4">I'm a passionate Full Stack Developer with experience building modern web applications. I love turning complex problems into simple, beautiful and intuitive solutions.</p>
+        <!-- Nested grid -->
+        <div class="row g-3">
+          <div class="col-12 col-sm-6">
+            <div class="info-card">
+              <i class="bi bi-geo-alt-fill gradient-text fs-4 me-2"></i>
+              <span class="text-muted-custom small">Location</span>
+              <p class="mb-0 fw-600" style="color:#e2e8f0">Hyderabad, India</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6">
+            <div class="info-card">
+              <i class="bi bi-mortarboard-fill gradient-text fs-4 me-2"></i>
+              <span class="text-muted-custom small">Degree</span>
+              <p class="mb-0" style="color:#e2e8f0">B.Tech – Computer Science</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6">
+            <div class="info-card">
+              <i class="bi bi-envelope-fill gradient-text fs-4 me-2"></i>
+              <span class="text-muted-custom small">Email</span>
+              <p class="mb-0" style="color:#e2e8f0">akhil@example.com</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6">
+            <div class="info-card">
+              <i class="bi bi-briefcase-fill gradient-text fs-4 me-2"></i>
+              <span class="text-muted-custom small">Status</span>
+              <p class="mb-0" style="color:#e2e8f0"><span class="badge bg-success">Open to Work</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills">
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <span class="section-tag">What I Do</span>
+      <h2 class="section-title">Skills & Technologies</h2>
+      <div class="section-divider mx-auto"></div>
+    </div>
+    <div class="row g-4">
+      <!-- col-12 col-md-6 col-lg-4 -->
+      <div class="col-12 col-md-6 col-lg-4 fade-up">
+        <div class="skill-card">
+          <h5 style="color:#c7d2fe"><i class="bi bi-browser-chrome me-2 gradient-text"></i>Frontend</h5>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1"><span class="small text-muted-custom">HTML/CSS</span><span class="small gradient-text">95%</span></div>
+            <div class="progress"><div class="progress-bar" data-width="95" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1"><span class="small text-muted-custom">Bootstrap 5</span><span class="small gradient-text">90%</span></div>
+            <div class="progress"><div class="progress-bar" data-width="90" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1"><span class="small text-muted-custom">JavaScript</span><span class="small gradient-text">80%</span></div>
+            <div class="progress"><div class="progress-bar" data-width="80" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>
+          </div>
+          <div class="mt-3 d-flex flex-wrap gap-2">
+            <span class="tech-badge" data-bs-toggle="tooltip" title="HyperText Markup Language"><i class="bi bi-filetype-html"></i>HTML5</span>
+            <span class="tech-badge" data-bs-toggle="tooltip" title="Cascading Style Sheets"><i class="bi bi-filetype-css"></i>CSS3</span>
+            <span class="tech-badge" data-bs-toggle="tooltip" title="jQuery Library"><i class="bi bi-code"></i>jQuery</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 fade-up">
+        <div class="skill-card">
+          <h5 style="color:#c7d2fe"><i class="bi bi-server me-2 gradient-text"></i>Backend</h5>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1"><span class="small text-muted-custom">PHP</span><span class="small gradient-text">85%</span></div>
+            <div class="progress"><div class="progress-bar" data-width="85" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1"><span class="small text-muted-custom">MySQL</span><span class="small gradient-text">80%</span></div>
+            <div class="progress"><div class="progress-bar" data-width="80" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1"><span class="small text-muted-custom">Node.js</span><span class="small gradient-text">65%</span></div>
+            <div class="progress"><div class="progress-bar" data-width="65" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>
+          </div>
+          <div class="mt-3 d-flex flex-wrap gap-2">
+            <span class="tech-badge" data-bs-toggle="tooltip" title="Hypertext Preprocessor"><i class="bi bi-filetype-php"></i>PHP</span>
+            <span class="tech-badge" data-bs-toggle="tooltip" title="Structured Query Language"><i class="bi bi-database"></i>MySQL</span>
+            <span class="tech-badge" data-bs-toggle="tooltip" title="MongoDB NoSQL"><i class="bi bi-hdd-stack"></i>MongoDB</span>
+          </div>
+        </div>
+      </div>
+      <!-- Offset demo: offset-lg-0 here but shown with col-lg-4 -->
+      <div class="col-12 col-md-6 col-lg-4 fade-up">
+        <div class="skill-card">
+          <h5 style="color:#c7d2fe"><i class="bi bi-tools me-2 gradient-text"></i>Tools & Others</h5>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1"><span class="small text-muted-custom">Git & GitHub</span><span class="small gradient-text">88%</span></div>
+            <div class="progress"><div class="progress-bar" data-width="88" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1"><span class="small text-muted-custom">Firebase</span><span class="small gradient-text">70%</span></div>
+            <div class="progress"><div class="progress-bar" data-width="70" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1"><span class="small text-muted-custom">REST APIs</span><span class="small gradient-text">75%</span></div>
+            <div class="progress"><div class="progress-bar" data-width="75" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>
+          </div>
+          <div class="mt-3 d-flex flex-wrap gap-2">
+            <span class="tech-badge" data-bs-toggle="tooltip" title="Version Control"><i class="bi bi-git"></i>Git</span>
+            <span class="tech-badge" data-bs-toggle="tooltip" title="Google Firebase"><i class="bi bi-fire"></i>Firebase</span>
+            <span class="tech-badge" data-bs-toggle="tooltip" title="XAMPP Stack"><i class="bi bi-stack"></i>XAMPP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery toggle button demo -->
+    <div class="text-center mt-4 fade-up">
+      <button class="btn btn-outline-glow" id="toggleSkillsBtn"><i class="bi bi-chevron-down me-2"></i>Show More Skills</button>
+      <div id="skillsExtra" style="display:none" class="mt-4">
+        <div class="row g-3 justify-content-center">
+          <div class="col-auto"><span class="tech-badge"><i class="bi bi-filetype-jsx me-1"></i>React (Learning)</span></div>
+          <div class="col-auto"><span class="tech-badge"><i class="bi bi-cloud me-1"></i>AWS Basics</span></div>
+          <div class="col-auto"><span class="tech-badge"><i class="bi bi-diagram-3 me-1"></i>Docker (Basics)</span></div>
+          <div class="col-auto"><span class="tech-badge"><i class="bi bi-shield-check me-1"></i>OAuth 2.0</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects">
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <span class="section-tag">My Work</span>
+      <h2 class="section-title">Projects</h2>
+      <div class="section-divider mx-auto"></div>
+    </div>
+    <!-- Gutters g-4, offset demo on last card -->
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4 fade-up">
+        <div class="project-card card border-0">
+          <div class="project-img-placeholder" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">💳</div>
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h5 class="card-title mb-0">Digital Banking System</h5>
+              <span class="badge" style="background:rgba(99,102,241,.2);color:#c7d2fe">PHP</span>
+            </div>
+            <p class="card-text">A full-featured mini banking app with OAuth, loans, wallet deposits and admin panels.</p>
+            <div class="d-flex gap-2 mt-3">
+              <button class="btn btn-gradient btn-sm" data-bs-toggle="modal" data-bs-target="#projectModal1"><i class="bi bi-eye me-1"></i>Details</button>
+              <a href="#" class="btn btn-outline-glow btn-sm"><i class="bi bi-github me-1"></i>Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 fade-up">
+        <div class="project-card card border-0">
+          <div class="project-img-placeholder" style="background:linear-gradient(135deg,#0891b2,#06b6d4)">🌐</div>
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h5 class="card-title mb-0">PHP Crash Course App</h5>
+              <span class="badge" style="background:rgba(6,182,212,.2);color:#67e8f9">PHP</span>
+            </div>
+            <p class="card-text">Comprehensive PHP learning app covering OOP, sessions, cookies, file handling and more.</p>
+            <div class="d-flex gap-2 mt-3">
+              <button class="btn btn-gradient btn-sm" data-bs-toggle="modal" data-bs-target="#projectModal2"><i class="bi bi-eye me-1"></i>Details</button>
+              <a href="#" class="btn btn-outline-glow btn-sm"><i class="bi bi-github me-1"></i>Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- offset-lg-0 on last card (or use offset-md-3 for a 2-col layout proof) -->
+      <div class="col-12 col-md-6 col-lg-4 offset-md-3 offset-lg-0 fade-up">
+        <div class="project-card card border-0">
+          <div class="project-img-placeholder" style="background:linear-gradient(135deg,#7c3aed,#a855f7)">💬</div>
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h5 class="card-title mb-0">Insta Chat App</h5>
+              <span class="badge" style="background:rgba(139,92,246,.2);color:#ddd6fe">Firebase</span>
+            </div>
+            <p class="card-text">Real-time chat application using Firebase Realtime Database with Google OAuth login.</p>
+            <div class="d-flex gap-2 mt-3">
+              <button class="btn btn-gradient btn-sm" data-bs-toggle="modal" data-bs-target="#projectModal3"><i class="bi bi-eye me-1"></i>Details</button>
+              <a href="#" class="btn btn-outline-glow btn-sm"><i class="bi bi-github me-1"></i>Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Project Modals -->
+<div class="modal fade" id="projectModal1" tabindex="-1" aria-labelledby="pm1Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title gradient-text" id="pm1Label"><i class="bi bi-bank2 me-2"></i>Digital Banking System</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="color:#cbd5e1">
+        <div class="row g-3">
+          <div class="col-md-6"><div class="info-card"><strong style="color:#c7d2fe">Tech Stack</strong><p class="mb-0 mt-1 text-muted-custom">PHP, MySQL, Bootstrap 5, jQuery, OAuth 2.0</p></div></div>
+          <div class="col-md-6"><div class="info-card"><strong style="color:#c7d2fe">Status</strong><p class="mb-0 mt-1"><span class="badge bg-success">Completed</span></p></div></div>
+        </div>
+        <ul class="mt-3" style="color:#94a3b8">
+          <li>Multi-role system: User, Cashier, Manager, Admin</li>
+          <li>Loan lifecycle with multi-stage approval workflow</li>
+          <li>Wallet deposit / transfer / withdrawal features</li>
+          <li>Google & GitHub OAuth integration</li>
+          <li>Firebase real-time notifications</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-glow btn-sm" data-bs-dismiss="modal">Close</button>
+        <a href="#" class="btn btn-gradient btn-sm"><i class="bi bi-github me-1"></i>View on GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="projectModal2" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title gradient-text"><i class="bi bi-code-slash me-2"></i>PHP Crash Course App</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="color:#94a3b8">
+        <p>Comprehensive PHP learning application with live examples for: arrays, OOP, sessions, cookies, file I/O, form handling, sanitization, and database connectivity.</p>
+        <span class="badge me-1" style="background:rgba(99,102,241,.2);color:#c7d2fe">PHP 8</span>
+        <span class="badge me-1" style="background:rgba(6,182,212,.2);color:#67e8f9">MySQL</span>
+        <span class="badge" style="background:rgba(139,92,246,.2);color:#ddd6fe">XAMPP</span>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-glow btn-sm" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="projectModal3" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title gradient-text"><i class="bi bi-chat-dots me-2"></i>Insta Chat App</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="color:#94a3b8">
+        <p>Real-time instant messaging using Firebase Realtime Database, Google Authentication and a clean Bootstrap UI with animated message bubbles.</p>
+        <span class="badge me-1" style="background:rgba(6,182,212,.2);color:#67e8f9">Firebase</span>
+        <span class="badge" style="background:rgba(99,102,241,.2);color:#c7d2fe">OAuth</span>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-glow btn-sm" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Quick Contact Modal (jQuery triggered) -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title gradient-text"><i class="bi bi-send me-2"></i>Quick Contact</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p style="color:#94a3b8">Scroll down to the contact form or reach me directly:</p>
+        <div class="d-flex gap-3 justify-content-center mt-3">
+          <a href="mailto:akhil@example.com" class="social-icon"><i class="bi bi-envelope-fill"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-gradient w-100" data-bs-dismiss="modal" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          <i class="bi bi-arrow-down me-2"></i>Go to Contact Form
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== EDUCATION ===================== -->
+<section id="education">
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <span class="section-tag">Background</span>
+      <h2 class="section-title">Education & Experience</h2>
+      <div class="section-divider mx-auto"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-lg-7 fade-up">
+        <h5 class="mb-3" style="color:#c7d2fe"><i class="bi bi-mortarboard-fill me-2 gradient-text"></i>Education</h5>
+        <!-- Responsive table -->
+        <div class="table-responsive">
+          <table class="table table-dark-custom table-hover align-middle">
+            <thead>
+              <tr>
+                <th><i class="bi bi-calendar3 me-1"></i>Year</th>
+                <th><i class="bi bi-book me-1"></i>Degree</th>
+                <th><i class="bi bi-building me-1"></i>Institution</th>
+                <th><i class="bi bi-award me-1"></i>Grade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>2022–2026</td><td>B.Tech – CSE</td><td>XYZ University</td><td><span class="badge bg-success">8.5 CGPA</span></td></tr>
+              <tr><td>2020–2022</td><td>Intermediate (MPC)</td><td>ABC Junior College</td><td><span class="badge bg-primary">94%</span></td></tr>
+              <tr><td>2019–2020</td><td>SSC</td><td>PQR High School</td><td><span class="badge bg-info text-dark">96%</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-12 col-lg-5 fade-up">
+        <h5 class="mb-3" style="color:#c7d2fe"><i class="bi bi-briefcase-fill me-2 gradient-text"></i>Experience</h5>
+        <ul class="list-group list-group-flush gap-2">
+          <li class="list-group-item list-group-item-custom rounded-3">
+            <div class="d-flex justify-content-between align-items-start">
+              <div><strong style="color:#f1f5f9">Web Dev Intern</strong><p class="mb-0 small text-muted-custom">TechStartup Pvt. Ltd.</p></div>
+              <span class="badge" style="background:rgba(99,102,241,.2);color:#c7d2fe">2024</span>
+            </div>
+          </li>
+          <li class="list-group-item list-group-item-custom rounded-3">
+            <div class="d-flex justify-content-between align-items-start">
+              <div><strong style="color:#f1f5f9">Open Source Contributor</strong><p class="mb-0 small text-muted-custom">GitHub – Various Projects</p></div>
+              <span class="badge" style="background:rgba(6,182,212,.2);color:#67e8f9">2023</span>
+            </div>
+          </li>
+          <li class="list-group-item list-group-item-custom rounded-3">
+            <div class="d-flex justify-content-between align-items-start">
+              <div><strong style="color:#f1f5f9">Freelance Developer</strong><p class="mb-0 small text-muted-custom">Independent – Client Projects</p></div>
+              <span class="badge" style="background:rgba(139,92,246,.2);color:#ddd6fe">2023</span>
+            </div>
+          </li>
+          <li class="list-group-item list-group-item-custom rounded-3">
+            <div class="d-flex justify-content-between align-items-start">
+              <div><strong style="color:#f1f5f9">Hackathon Finalist</strong><p class="mb-0 small text-muted-custom">National Code Sprint 2023</p></div>
+              <span class="badge bg-warning text-dark">Award</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALLERY (Carousel) ===================== -->
+<section id="gallery">
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <span class="section-tag">Showcase</span>
+      <h2 class="section-title">Gallery</h2>
+      <div class="section-divider mx-auto"></div>
+    </div>
+    <div id="portfolioCarousel" class="carousel slide fade-up" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner rounded-4" style="border:1px solid rgba(255,255,255,.1)">
+        <div class="carousel-item active">
+          <div class="carousel-item-custom" style="background:linear-gradient(135deg,#1a1a2e,#0f3460)">
+            <i class="bi bi-bank2" style="font-size:5rem;color:#6366f1"></i>
+            <h3 class="mt-3" style="color:#f1f5f9">Digital Banking System</h3>
+            <p class="text-muted-custom">Full-stack banking app with multi-role authentication</p>
+            <div class="d-flex gap-2 mt-2 justify-content-center flex-wrap">
+              <span class="badge" style="background:rgba(99,102,241,.3);color:#c7d2fe">PHP</span>
+              <span class="badge" style="background:rgba(6,182,212,.3);color:#67e8f9">MySQL</span>
+              <span class="badge" style="background:rgba(139,92,246,.3);color:#ddd6fe">Bootstrap 5</span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-item-custom" style="background:linear-gradient(135deg,#0f3460,#16213e)">
+            <i class="bi bi-chat-dots-fill" style="font-size:5rem;color:#06b6d4"></i>
+            <h3 class="mt-3" style="color:#f1f5f9">Insta Chat App</h3>
+            <p class="text-muted-custom">Real-time messaging with Firebase & Google OAuth</p>
+            <div class="d-flex gap-2 mt-2 justify-content-center">
+              <span class="badge" style="background:rgba(6,182,212,.3);color:#67e8f9">Firebase</span>
+              <span class="badge" style="background:rgba(99,102,241,.3);color:#c7d2fe">OAuth 2.0</span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-item-custom" style="background:linear-gradient(135deg,#16213e,#1a1a2e)">
+            <i class="bi bi-code-slash" style="font-size:5rem;color:#8b5cf6"></i>
+            <h3 class="mt-3" style="color:#f1f5f9">PHP Crash Projects</h3>
+            <p class="text-muted-custom">Collection of PHP learning modules & exercises</p>
+            <div class="d-flex gap-2 mt-2 justify-content-center">
+              <span class="badge" style="background:rgba(139,92,246,.3);color:#ddd6fe">PHP 8</span>
+              <span class="badge" style="background:rgba(99,102,241,.3);color:#c7d2fe">XAMPP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INTERACTIVE (Accordion / Collapse) ===================== -->
+<section id="interactive">
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Interactive Section</h2>
+      <div class="section-divider mx-auto"></div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8 fade-up">
+        <div class="accordion accordion-custom" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                <i class="bi bi-question-circle me-2"></i>What technologies do you specialize in?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">I specialize in PHP, MySQL, Bootstrap 5, jQuery and increasingly in modern JavaScript frameworks. I enjoy building full-stack web applications with clean UI and robust backends.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                <i class="bi bi-briefcase me-2"></i>Are you available for freelance projects?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Yes! I'm currently open to freelance opportunities and full-time positions. Feel free to reach out through the contact form below.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                <i class="bi bi-clock me-2"></i>What is your typical project timeline?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Project timelines vary based on scope. A simple portfolio site takes 1-2 weeks; a complex web application may take 1-3 months. I always provide detailed estimates upfront.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                <i class="bi bi-globe me-2"></i>Do you work with international clients?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Absolutely! I've worked with clients across different time zones using async communication tools like Slack and GitHub. Remote collaboration is part of my workflow.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact">
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Contact Me</h2>
+      <div class="section-divider mx-auto"></div>
+    </div>
+    <!-- Success alert (jQuery fadeIn/Out) -->
+    <div id="form-success" class="alert alert-custom text-center mb-4 d-none" style="display:none!important">
+      <i class="bi bi-check-circle me-2"></i>Message sent successfully! I'll get back to you soon.
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-9 fade-up">
+        <div class="contact-card">
+          <form id="contactForm" novalidate>
+            <div class="row g-3">
+              <!-- Text input -->
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="fullName"><i class="bi bi-person me-1"></i>Full Name</label>
+                <input type="text" class="form-control form-control-dark" id="fullName" placeholder="Akhil Kuncham" required minlength="3"/>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Name must be at least 3 characters.</div>
+              </div>
+              <!-- Email input -->
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="emailAddr"><i class="bi bi-envelope me-1"></i>Email Address</label>
+                <input type="email" class="form-control form-control-dark" id="emailAddr" placeholder="akhil@example.com" required/>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+              <!-- Password input -->
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="passCode"><i class="bi bi-lock me-1"></i>Access Code (Optional)</label>
+                <input type="password" class="form-control form-control-dark" id="passCode" placeholder="For private projects"/>
+                <div class="valid-feedback">Got it!</div>
+              </div>
+              <!-- Select dropdown -->
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="projectType"><i class="bi bi-tag me-1"></i>Project Type</label>
+                <select class="form-select form-select-dark" id="projectType" required>
+                  <option value="" disabled selected>Select type…</option>
+                  <option>Web Application</option>
+                  <option>Portfolio / Landing Page</option>
+                  <option>E-Commerce</option>
+                  <option>API Integration</option>
+                  <option>Other</option>
+                </select>
+                <div class="invalid-feedback">Please select a project type.</div>
+              </div>
+              <!-- Input group -->
+              <div class="col-12">
+                <label class="form-label" for="budget"><i class="bi bi-currency-rupee me-1"></i>Budget</label>
+                <div class="input-group">
+                  <span class="input-group-text" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);color:#94a3b8"><i class="bi bi-currency-rupee"></i></span>
+                  <input type="text" class="form-control form-control-dark" id="budget" placeholder="e.g. 10,000 – 50,000"/>
+                  <span class="input-group-text" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);color:#94a3b8">INR</span>
+                </div>
+              </div>
+              <!-- Textarea -->
+              <div class="col-12">
+                <label class="form-label" for="message"><i class="bi bi-chat-text me-1"></i>Message</label>
+                <textarea class="form-control form-control-dark" id="message" rows="4" placeholder="Tell me about your project…" required minlength="20"></textarea>
+                <div class="invalid-feedback">Message must be at least 20 characters.</div>
+              </div>
+              <!-- Radio buttons -->
+              <div class="col-12">
+                <label class="form-label d-block"><i class="bi bi-lightning me-1"></i>Preferred Response Time</label>
+                <div class="d-flex flex-wrap gap-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="responseTime" id="rt1" value="24h" checked/>
+                    <label class="form-check-label text-muted-custom" for="rt1">Within 24 hrs</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="responseTime" id="rt2" value="48h"/>
+                    <label class="form-check-label text-muted-custom" for="rt2">Within 48 hrs</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="responseTime" id="rt3" value="1w"/>
+                    <label class="form-check-label text-muted-custom" for="rt3">No rush</label>
+                  </div>
+                </div>
+              </div>
+              <!-- Checkboxes -->
+              <div class="col-12">
+                <label class="form-label d-block"><i class="bi bi-check2-square me-1"></i>Services Interested In</label>
+                <div class="d-flex flex-wrap gap-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="svc1"/>
+                    <label class="form-check-label text-muted-custom" for="svc1">UI/UX Design</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="svc2"/>
+                    <label class="form-check-label text-muted-custom" for="svc2">Backend Dev</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="svc3"/>
+                    <label class="form-check-label text-muted-custom" for="svc3">Database Design</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="svc4"/>
+                    <label class="form-check-label text-muted-custom" for="svc4">API Integration</label>
+                  </div>
+                </div>
+              </div>
+              <!-- Submit with popover -->
+              <div class="col-12 d-flex gap-3 flex-wrap mt-2">
+                <button type="submit" class="btn btn-gradient px-5"
+                  data-bs-toggle="popover"
+                  data-bs-title="<i class='bi bi-shield-check me-1'></i>Secure Form"
+                  data-bs-content="Your message is private and will only be seen by Akhil."
+                  data-bs-html="true">
+                  <i class="bi bi-send me-2"></i>Send Message
+                </button>
+                <button type="reset" class="btn btn-outline-glow">
+                  <i class="bi bi-x-circle me-2"></i>Clear
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <span class="navbar-brand d-block mb-2"><i class="bi bi-code-slash me-2"></i>Akhil.dev</span>
+        <p class="text-muted-custom small mb-0">Full Stack Developer · Bootstrap Enthusiast</p>
+      </div>
+      <div class="col-12 col-md-4 text-center">
+        <div class="d-flex justify-content-center gap-3">
+          <a href="#" class="social-icon" title="GitHub"><i class="bi bi-github"></i></a>
+          <a href="#" class="social-icon" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="social-icon" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="mailto:akhil@example.com" class="social-icon" title="Email"><i class="bi bi-envelope-fill"></i></a>
+          <a href="#" class="social-icon" title="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 text-center text-md-end">
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item"><a class="footer-link small" href="#about">About</a></li>
+          <li class="list-inline-item"><a class="footer-link small" href="#projects">Projects</a></li>
+          <li class="list-inline-item"><a class="footer-link small" href="#contact">Contact</a></li>
+        </ul>
+        <p class="text-muted-custom small mt-2 mb-0">&copy; 2026 Akhil Kuncham. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Custom JS -->
+<script src="js/script.js"></script>
+</body>
+</html>
